@@ -1,0 +1,14 @@
+[
+  {
+    "__Elf__":true,
+    "level":4
+  },
+  {
+    "__Elf__":true,
+    "level":2,
+    "ability_scores": {
+            "str": 1, "dex": 2, "con": 3,
+            "int": 4, "wis": 5, "cha": 6
+        }
+  }
+]
