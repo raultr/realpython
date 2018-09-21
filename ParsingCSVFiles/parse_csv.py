@@ -11,14 +11,13 @@ class ParseCSV(object):
         return parsed_data
 
     def obtener_minima_diferencia(self, parsed_data, columna1, columna2):
-        parsed_data.pop(0)
-        goles = [x[columna1] for x in parsed_data]  # Lista de todos los goles
-        goles_encontra = [x[columna2]for x in parsed_data]  # Lista de todos los goles encontra
+        goles = [x[columna1] for x in parsed_data[1:]]  # Lista de todos los goles
+        goles_encontra = [x[columna2]for x in parsed_data[1:]]  # Lista de todos los goles encontra
         agrupar_datos = zip(goles, goles_encontra)  # Agrupamos los datos por su indice
         dfierencias_goles = [float(x) - float(y) for x, y in agrupar_datos]  # Calculamos la diferencia de goles y se regresa
         return dfierencias_goles.index(min(dfierencias_goles))
 
     def obtener_nombre(self, index_value, parsed_data):
         print(parsed_data[0])
-        equipos = [x[0] for x in parsed_data]
+        equipos = [x[0] for x in parsed_data[1:]]
         return equipos[index_value]
