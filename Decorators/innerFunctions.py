@@ -10,7 +10,6 @@ def parent():
     second_child()
     first_child()
 
-
 def parentFunction(num):
     def first_child():
         return "Hi, I am Emma"
